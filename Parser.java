@@ -15,14 +15,17 @@ public class Parser{
 		ArrayList<String[]> lines = new ArrayList<>();
 		String[]			line;
 		String				buffer;
+		int					n = 0;
 
 		BufferedReader br = new BufferedReader(new FileReader(file));
 		buffer = br.readLine();
 		while (buffer != null){
 			line = buffer.split(" ");
-			//check integrity of line
+			if ((n == 0 && line.length != 1) || (n != 0 && line.length != 5))
+				throw (new IOException());
 			lines.add(line);
 			buffer = br.readLine();
+			n++;
 		}
 		return (lines);
 	} 

@@ -20,23 +20,26 @@ public class Main
 			loops = Integer.parseInt(lines.get(0)[0]);
 			for (int i = 1; i < lines.size() - 1; i++)
 			{
-				// System.out.println(lines.get(i)[0] + " " + lines.get(i)[1] + " " +  Integer.parseInt(lines.get(i)[2]) + " " +  Integer.parseInt(lines.get(i)[3]) + " " +  Integer.parseInt(lines.get(i)[4]));
-				AircraftFactory.newAircraft(lines.get(i)[0], lines.get(i)[1], new Coordinates(Integer.parseInt(lines.get(i)[2]), Integer.parseInt(lines.get(i)[3]), Integer.parseInt(lines.get(i)[4]))).registerTower(tower);
+				AircraftFactory.newAircraft(
+					lines.get(i)[0], lines.get(i)[1], new Coordinates(
+						Integer.parseInt(lines.get(i)[2]), 
+						Integer.parseInt(lines.get(i)[3]), 
+						Integer.parseInt(lines.get(i)[4]))).registerTower(tower);
 			}
 		}
 		catch (FileNotFoundException e){
 			System.out.println("Error: " + args[0] + ": file not found");
 			return ;
 		}
-		catch (IOException e){
-			System.out.println("Error: " + args[0] + ": IO error");
+		catch (IOException | NumberFormatException e){
+			System.out.println("Error: " + args[0] + ": file formatting error");
 			return ;
 		}
 		catch (AircraftFactoryException e){
 			System.out.println("Error: " + e.s);
 			return ;
 		}
-
-		//run loops till int loops == 0
+		while (--loops > -1)
+			tower.changeWeather();
 	}
 }
