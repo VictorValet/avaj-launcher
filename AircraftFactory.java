@@ -9,8 +9,8 @@ public final class AircraftFactory{
 		if (Aircraft.getTotal() == 100)
 			throw new AircraftFactoryException("Too many aircrafts");
 		switch (p_type.toUpperCase()){
-			case "BALLOON":
-				return (new Balloon(Aircraft.getTotal(), p_name, p_coordinates));
+			case "BALOON":
+				return (new Baloon(Aircraft.getTotal(), p_name, p_coordinates));
 			case "HELICOPTER":
 				return (new Helicopter(Aircraft.getTotal(), p_name, p_coordinates));
 			case "JETPLANE":

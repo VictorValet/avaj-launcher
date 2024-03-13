@@ -1,8 +1,8 @@
-public class Balloon extends Aircraft{
+public class Baloon extends Aircraft{
 
-	public Balloon(long p_id, String p_name, Coordinates p_coordinate){
+	public Baloon(long p_id, String p_name, Coordinates p_coordinate){
 		super(p_id, p_name, p_coordinate);
-		id_str = "Balloon" + '#' + name + "(" + id + ")";
+		id_str = "Baloon" + '#' + name + "(" + id + ")";
 		moves[FOG] = new Coordinates(0, 0, -3);
 		moves[RAIN] = new Coordinates(0, 0, -5);
 		moves[SNOW] = new Coordinates(0, 0, -15);

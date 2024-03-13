@@ -13,7 +13,7 @@ public class Aircraft extends Flyable{
 
 	protected Aircraft(long p_id, String p_name, Coordinates p_coordinate){
 		total++;
-		id = p_id;//check if if is already in use
+		id = p_id;//check if it is already in use
 		name = p_name;
 		coordinates = p_coordinate;
 	}
