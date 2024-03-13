@@ -6,9 +6,9 @@ public class Main
 {
 	public static void main(String[] args) 
 	{
-		if (args.length == 0)
+		if (args.length != 1 || args[0].lastIndexOf(".txt") != args[0].length() - 4)
 		{
-			System.out.println("No scenario file");
+			System.out.println("Usage: java Main [scenario.txt]");
 			return ;
 		}
 		int					loops = 0;
