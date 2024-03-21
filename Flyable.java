@@ -1,3 +1,5 @@
+package java.project.avajlauncher;
+
 abstract class Flyable{
 
 	protected WeatherTower weatherTower;

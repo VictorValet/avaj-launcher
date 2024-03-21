@@ -1,3 +1,5 @@
+package java.project.avajlauncher;
+
 public final class AircraftFactory{
 	
 	private static final AircraftFactory instance = new AircraftFactory();

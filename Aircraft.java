@@ -1,3 +1,5 @@
+package java.project.avajlauncher;
+
 import java.util.HashSet;
 
 public class Aircraft extends Flyable{

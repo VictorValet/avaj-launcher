@@ -1,3 +1,5 @@
+package java.project.avajlauncher;
+
 class AircraftFactoryException extends Exception{
 	
 	String s;

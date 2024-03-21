@@ -1,4 +1,7 @@
+package java.project.avajlauncher;
+
 import java.util.Random;
+import java.util.Scanner;
 
 public final class WeatherProvider{
 	
