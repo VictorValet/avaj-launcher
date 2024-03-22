@@ -1,8 +1,8 @@
-package java.project.avajlauncher;
+package project.avajlauncher;
 
-public class Helicopter extends Aircraft{
+public class Helicopter extends Aircraft {
 
-	public Helicopter(long p_id, String p_name, Coordinates p_coordinate){
+	public Helicopter(long p_id, String p_name, Coordinates p_coordinate) {
 		super(p_id, p_name, p_coordinate);
 		id_str = "Helicopter" + '#' + name + "(" + id + ")";
 		moves[FOG] = new Coordinates(1, 0, 0);

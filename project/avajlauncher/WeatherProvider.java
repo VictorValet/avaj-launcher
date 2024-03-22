@@ -1,18 +1,18 @@
-package java.project.avajlauncher;
+package project.avajlauncher;
 
 import java.util.Random;
 import java.util.Scanner;
 
-public final class WeatherProvider{
+public final class WeatherProvider {
 	
 	private static final WeatherProvider	instance = new WeatherProvider();
 	private static final String[]			weather = {"FOG", "RAIN", "SNOW", "SUN"};
 	private static final byte[] 			list = createList();
 	private static final int[] 				seed = createSeed();
 
-	private WeatherProvider(){}
+	private WeatherProvider() {}
 	
-	private static byte[] createList(){
+	private static byte[] createList() {
 		Random	random = new Random();
 		byte[]	n_list = new byte[100];
 		for (int i = 0; i < 100; i++)
@@ -20,7 +20,7 @@ public final class WeatherProvider{
 		return (n_list);
 	}
 
-	private static int[] createSeed(){
+	private static int[] createSeed() {
 		Random	random = new Random();
 		int[]	n_seed = new int[3];
 		for (int i = 0; i < 3; i++)
@@ -28,7 +28,7 @@ public final class WeatherProvider{
 		return (n_seed);
 	}
 
-	public static String getCurrentWeather(Coordinates p_coordinates){
+	public static String getCurrentWeather(Coordinates p_coordinates) {
 		int random =
 			((p_coordinates.getLongitude() + seed[0]) 
 			* (p_coordinates.getLatitude() + seed[1]) 

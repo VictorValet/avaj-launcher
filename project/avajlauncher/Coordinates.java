@@ -1,18 +1,18 @@
-package java.project.avajlauncher;
+package project.avajlauncher;
 
-public class Coordinates{
+public class Coordinates {
 	
 	private int longitude;
 	private int latitude;
 	private int height;
 
-	Coordinates(){
+	Coordinates() {
 		longitude = 0;
 		latitude = 0;
 		height = 0;
 	}
 
-	Coordinates(int p_longitude, int p_latitude, int p_height){
+	Coordinates(int p_longitude, int p_latitude, int p_height) {
 		longitude = p_longitude;
 		latitude = p_latitude;
 		if (p_height > 100)
@@ -21,15 +21,15 @@ public class Coordinates{
 			height = p_height;
 	}
 
-	public int getLongitude(){
+	public int getLongitude() {
 		return (longitude);
 	}
 
-	public int getLatitude(){
+	public int getLatitude() {
 		return (latitude);
 	}
 
-	public int getHeight(){
+	public int getHeight() {
 		return (height);
 	}
 }

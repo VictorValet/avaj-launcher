@@ -1,8 +1,8 @@
-package java.project.avajlauncher;
+package project.avajlauncher;
 
-public class Baloon extends Aircraft{
+public class Baloon extends Aircraft {
 
-	public Baloon(long p_id, String p_name, Coordinates p_coordinate){
+	public Baloon(long p_id, String p_name, Coordinates p_coordinate) {
 		super(p_id, p_name, p_coordinate);
 		id_str = "Baloon" + '#' + name + "(" + id + ")";
 		moves[FOG] = new Coordinates(0, 0, -3);

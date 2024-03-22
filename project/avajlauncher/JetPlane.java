@@ -1,8 +1,8 @@
-package java.project.avajlauncher;
+package project.avajlauncher;
 
-public class JetPlane extends Aircraft{
+public class JetPlane extends Aircraft {
 
-	public JetPlane(long p_id, String p_name, Coordinates p_coordinate){
+	public JetPlane(long p_id, String p_name, Coordinates p_coordinate) {
 		super(p_id, p_name, p_coordinate);
 		id_str = "JetPlane" + '#' + name + "(" + id + ")";
 		moves[FOG] = new Coordinates(0, 1, 0);
