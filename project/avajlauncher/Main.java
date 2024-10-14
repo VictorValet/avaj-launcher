@@ -16,7 +16,6 @@ public class Main {
 		try {
 			LinkedHashMap<Integer, String[]> lines = Parser.parse(args[0]);
 			Simulation sim = new Simulation(lines);
-			Logger.close();
 		}
 		catch (FileNotFoundException e) {
 			System.out.println(

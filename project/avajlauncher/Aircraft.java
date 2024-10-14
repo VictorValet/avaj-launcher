@@ -29,7 +29,8 @@ public class Aircraft extends Flyable {
 			coordinates.getHeight() + p_coord.getHeight());
 		if (coordinates.getHeight() > 0)
 			Logger.log(id_str 
-				+ ": " + messages[weatherToInt()]);
+				+ ": " + messages[weatherToInt()]
+				+ " " + coordinatesToString());
 		else
 		{
 			Logger.log(id_str + "landing");

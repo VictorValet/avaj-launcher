@@ -7,11 +7,8 @@ public class Tower {
 
 	private ArrayList<Flyable> observers = new ArrayList<>();
 
-	public void register(Flyable p_flyable) throws IOException {
+	public void register(Flyable p_flyable) {
 		observers.add(p_flyable);
-		Logger.log("Tower says: " 
-			+ p_flyable.toString()
-			+ " registered to weather tower. ");
 	}
 
 	public void unregister(Flyable p_flyable) throws IOException {
@@ -22,6 +19,15 @@ public class Tower {
 			Logger.log("Tower says: " 
 				+ ((Aircraft)p_flyable).toString()
 				+ " unregistered from weather tower.");
+		}
+	}
+
+	public void logRegistered() throws IOException {
+		for (Flyable f: observers) {
+			Logger.log("Tower says: " 
+				+ f.toString()
+				+ " registered to weather tower."
+				+ " " + f.coordinatesToString());
 		}
 	}
 

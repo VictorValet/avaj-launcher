@@ -27,7 +27,6 @@ public class Simulation {
 					if (loops < 1) {
 						throw new FileFormattingException(line, key);
 					}
-					Logger.open("simulation.txt");
 				}
 				else {
 					AircraftFactory.newAircraft(
@@ -37,8 +36,11 @@ public class Simulation {
 							Integer.parseInt(line[4]))).registerTower(tower);
 				}
 			}
+			Logger.open("simulation.txt");
+			tower.logRegistered();
 			while (--loops > -1)
 				tower.changeWeather();
+			Logger.close();
 		}
 		catch (NumberFormatException e) {
 			throw new FileFormattingException(line, number);
