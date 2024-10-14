@@ -10,8 +10,8 @@ public class Tower {
 	public void register(Flyable p_flyable) throws IOException {
 		observers.add(p_flyable);
 		Logger.log("Tower says: " 
-			+ ((Aircraft)p_flyable).toString() 
-			+ " registered to weather tower.");
+			+ p_flyable.toString()
+			+ " registered to weather tower. ");
 	}
 
 	public void unregister(Flyable p_flyable) throws IOException {

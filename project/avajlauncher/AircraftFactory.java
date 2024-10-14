@@ -18,7 +18,7 @@ public final class AircraftFactory {
 			case "JETPLANE":
 				return (new JetPlane(Aircraft.getTotal(), p_name, p_coordinates));
 			default:
-				throw new AircraftFactoryException("Unknown aircraft");
+				throw new AircraftFactoryException("Unknown aircraft type: " + p_type);
 		}
 	}
 }

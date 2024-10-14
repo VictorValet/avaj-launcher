@@ -6,11 +6,11 @@ import java.util.HashSet;
 public class Aircraft extends Flyable {
 
 	private static int			total = 0;
-	protected static final int	FOG = 0, RAIN = 1, SNOW = 2, SUN = 3;
 	protected long				id;
 	protected String			name;
+	protected String			id_str = "Unknown aircraft type";
 	protected Coordinates		coordinates;
-	protected String			id_str = "";
+	protected static final int	FOG = 0, RAIN = 1, SNOW = 2, SUN = 3;
 	protected String			messages[] = new String[4];
 	protected Coordinates		moves[] = new Coordinates[4];
 
@@ -29,8 +29,7 @@ public class Aircraft extends Flyable {
 			coordinates.getHeight() + p_coord.getHeight());
 		if (coordinates.getHeight() > 0)
 			Logger.log(id_str 
-			+ ": " + messages[weatherToInt()]
-			+ " (at: " + coordinates.getLongitude() + ", " + coordinates.getLatitude() + ", " + coordinates.getHeight() + ")");
+				+ ": " + messages[weatherToInt()]);
 		else
 		{
 			Logger.log(id_str + "landing");
@@ -55,6 +54,14 @@ public class Aircraft extends Flyable {
 
 	public String toString() {
 		return (id_str);
+	}
+
+	public String coordinatesToString() {
+		return ("(at: " +
+			coordinates.getLongitude() + ", " +
+			coordinates.getLatitude() + ", " +
+			coordinates.getHeight() + ", " +
+			weatherTower.getWeather(coordinates) + ")");
 	}
 
 	public static int getTotal() {
