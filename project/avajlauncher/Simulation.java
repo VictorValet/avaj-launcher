@@ -3,6 +3,7 @@ package project.avajlauncher;
 import java.io.IOException;
 import java.util.LinkedHashMap;
 import project.avajlauncher.exceptions.FileFormattingException;
+import project.avajlauncher.exceptions.AircraftException;
 
 public class Simulation {
 
@@ -10,7 +11,7 @@ public class Simulation {
 	WeatherTower						tower = new WeatherTower();
 
 	public Simulation (LinkedHashMap<Integer, String[]>	lines) 
-		throws FileFormattingException, AircraftFactoryException, IOException
+		throws FileFormattingException, AircraftException, IOException
 	{
 		String[]	line = null;
 		Integer		number = null;

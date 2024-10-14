@@ -4,6 +4,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.LinkedHashMap;
 import project.avajlauncher.exceptions.FileFormattingException;
+import project.avajlauncher.exceptions.AircraftException;
 
 public class Main {
 
@@ -29,8 +30,8 @@ public class Main {
 				args[0] + "' " + e.lineToString()
 			);
 		}
-		catch (AircraftFactoryException e) {
-			System.out.println("AircraftFactoryException" + ": " + e.s);
+		catch (AircraftException e) {
+			System.out.println("AircraftException" + ": " + e.toString());
 		}
 		catch (IOException e) {
 			System.out.println(
